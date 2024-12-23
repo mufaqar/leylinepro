@@ -9,10 +9,10 @@ const SinglePostTemp = () => {
                 <div className="flex max-w-[1280px] flex-col md:flex-row gap-7 lg:gap-16 mx-auto px-3 w-full">
                     <div className="md:w-[70%] gap-4 sm:gap-8">
                         <div>
-                            <h6 className={` bg-[#588A8D] capitalize font-bold rounded-md text-sm hover:text-gray-200 w-fit  py-1 px-2 text-white`}><Link href="#">AI Commercials</Link></h6>
-                            <h2 className={`text-gray-200 font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl xl:leading-normal mb-6 hover:text-gray-400 cursor-pointer capitalize mt-3`}>Commercial Video AI | Benefits of Using Commercial Video AI in 2024</h2>
+                            <h6 className={` bg-[#588A8D] capitalize font-bold rounded-md text-sm hover:text-gray-200 w-fit py-1 px-2 text-white`}><Link href="#">AI Commercials</Link></h6>
+                            <h2 className={`text-gray-200 font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl xl:leading-[56px] mb-6  cursor-pointer capitalize mt-3`}>Commercial Video AI | Benefits of Using Commercial Video AI in 2024</h2>
                             <Image src="https://leylinepro.net/wp-content/uploads/2024/12/1-60.webp" className='w-full' alt='' width={800} height={400} />
-                            <div className='mt-5'>
+                            <div className='mt-5 lg:text-lg'>
                                 <p className='pb-4 text-gray-200'>The digital landscape is evolving rapidly, and so are the tools used by content creators to produce high-quality videos. One such innovation is the AI reel maker, a groundbreaking tool that leverages the power of artificial intelligence to simplify and enhance the process of creating video reels. Traditionally, producing a professional reel required significant time, technical skills, and expertise in video editing software. However, with the advent of AI-powered tools, this process has become faster, more accessible, and incredibly efficient.</p>
                                 <p className='pb-4 text-gray-200'>An AI reel maker is designed to automate the time-consuming and complex aspects of video production, enabling creators to focus on what matters most—the content. Whether you’re a professional looking to build a stunning portfolio or a business wanting to showcase its products and services, an AI reel maker can help you create polished, engaging video reels with ease. These tools analyze your raw footage, select the best moments, and even add transitions, music, and effects, all with minimal input from you.</p>
                             </div>
