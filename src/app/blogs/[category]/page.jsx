@@ -3,7 +3,7 @@ import Banner from './components/banner'
 import CategoryBlogDesign from './components/category-blog-design'
 import Footer from "../components/footer"
 
-const Category = () => {
+const Category = ({params}) => {
   return (
     <section className='bg-[#1A202C]'>
       <Banner />
