@@ -18,7 +18,7 @@ const PostSlider = ({data}) => {
       <div className="container mx-auto px-3 mt-16">
       <Slider {...settings}>
            { data?.map((item, idx)=>(
-                <SliderPostDesign key={idx} data={item}/>
+              <SliderPostDesign key={idx} data={item}/>
             ))}
       </Slider>
       </div>
