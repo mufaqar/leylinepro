@@ -21,16 +21,16 @@ const SinglePostTemp = ({ data, blogs }) => {
                     <div className="md:w-[30%] flex flex-col gap-6">
                         <div className='bg-[#252C39] p-7 flex flex-col gap-5'>
                             {
-                                blogs?.slice(3)?.map((item, idx) => (
+                                blogs?.map((item, idx) => (
                                     <article key={idx}>
                                         <figure>
                                             <Image src={item?.featured_image_src_large[0]} className='w-full' alt='' width={800} height={400} />
                                         </figure>
                                         <h2 className={`text-gray-200 font-bold text-xl hover:text-gray-400 cursor-pointer capitalize mt-3`}>
-                                            <Link href={`/${data?.slug}`}>{data?.title?.rendered}</Link>
+                                            <Link href={`/${item?.slug}`}>{item?.title?.rendered}</Link>
                                         </h2>
-                                        <h4 className='text-gray-200 font-medium mt-2 mb-5'>Updated on {dateFormate(data?.modified_gmt)}</h4>
-                                        <Link href={`/${data?.slug}`} className='font-bold text-white uppercase hover:text-[#588A8D]'>Read More</Link>
+                                        <h4 className='text-gray-200 font-medium mt-2 mb-5'>Updated on {dateFormate(item?.modified_gmt)}</h4>
+                                        <Link href={`/${item?.slug}`} className='font-bold text-white uppercase hover:text-[#588A8D]'>Read More</Link>
                                     </article>
                                 ))
                             }

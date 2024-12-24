@@ -17,7 +17,7 @@ const SinglePost = async ({params}) => {
 
   return (
     <>
-        <SinglePostTemp data={singleBlog[0]} blogs={blogs}/>
+        <SinglePostTemp data={singleBlog[0]} blogs={blogs.slice(0, 3)}/>
     </>
   )
 }
