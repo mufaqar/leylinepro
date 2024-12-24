@@ -28,7 +28,7 @@ const PostSlider = () => {
 
 export default PostSlider;
 
-var settings = {
+const settings = {
     dots: true,
     infinite: false,
     arrows: false,

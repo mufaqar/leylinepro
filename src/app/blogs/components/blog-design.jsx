@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const BlogDesign = ({readmore, small}:any) => {
+const BlogDesign = ({readmore, small}) => {
   return (
     <article>
         <figure>
