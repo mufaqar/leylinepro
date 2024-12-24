@@ -6,7 +6,7 @@ import SliderPostDesign from "./SliderPostDesign"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const PostSlider = () => {
+const PostSlider = ({data}) => {
   return (
     <section className="py-10 md:py-20">
       <h2 className="text-gray-200 text-center font-bold text-xl md:text-3xl lg:text-4xl hover:text-gray-400 cursor-pointer capitalize mt-3">
@@ -17,8 +17,8 @@ const PostSlider = () => {
       </div>
       <div className="container mx-auto px-3 mt-16">
       <Slider {...settings}>
-           { [1,2,3,4,5].map((item, idx)=>(
-                <SliderPostDesign key={idx} />
+           { data?.map((item, idx)=>(
+                <SliderPostDesign key={idx} data={item}/>
             ))}
       </Slider>
       </div>
