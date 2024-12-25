@@ -1,10 +1,10 @@
 import React from 'react'
 import Banner from './components/banner'
 import CategoryBlogDesign from './components/category-blog-design'
-import Footer from "../components/footer"
 
 const Category = async ({params}) => {
   const res = await fetchDataByCategory(params?.category)
+
   return (
     <section className='bg-[#1A202C]'>
       <Banner title={params?.category} />
@@ -35,7 +35,7 @@ export default Category
 
 
 const fetchDataByCategory = async (slug) => {
-  const endpoint = 'https://leylinepro.net/graphql'; // Replace with your GraphQL endpoint
+  const endpoint = 'https://leylinepro.net/graphql';
   
   const query = `
     query NewQuery {

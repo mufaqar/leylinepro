@@ -4,7 +4,6 @@ import Link from 'next/link'
 import React from 'react'
 
 const CategoryBlogDesign = ({data}) => {
-    console.log("🚀 ~ CategoryBlogDesign ~ data:", data?.categories)
     return (
         <article className='flex flex-col sm:flex-row gap-8'>
             <figure className='sm:w-[40%]'>
