@@ -2,6 +2,21 @@ import React from 'react'
 import Banner from './components/banner'
 import CategoryBlogDesign from './components/category-blog-design'
 
+
+export async function generateMetadata({ params }) {  
+  return {
+    title: `${(params?.category).replace('-', ' ')} | Leylinepro`,
+    description: `${(params?.category).replace('-', ' ')} | Leylinepro`,
+    alternates: {
+      canonical: `https://leylinepro.net/blogs/${params?.category}`,
+      languages: {
+        'en-US': '/en-US',
+        'de-DE': '/de-DE',
+      },
+    }
+  }
+}
+
 const Category = async ({params}) => {
   const res = await fetchDataByCategory(params?.category)
 
@@ -24,7 +39,6 @@ const Category = async ({params}) => {
           </div>
         </div>
       </div>
-      <Footer/>
     </section>
   )
 }

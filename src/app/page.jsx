@@ -1,9 +1,7 @@
-// "use client"
 import React from "react";
-import Hero from "./components/main";
-import BlogDesign from "./components/blog-design";
-import PostSlider from "./components/PostSlider";
-import Footer from "./components/footer"
+import Hero from "./blogs/components/main";
+import BlogDesign from "./blogs/components/blog-design";
+import PostSlider from "./blogs/components/PostSlider";
 
 async function getBlogs() {
   const response = await fetch("https://leylinepro.net/wp-json/wp/v2/posts")
@@ -14,7 +12,7 @@ export const metadata = {
   title: 'Blogs | Leylinepro',
   description: "Blogs leylinepro",
   alternates: {
-    canonical: `https://leylinepro.net/`,
+    canonical: `https://leylinepro.net`,
     languages: {
       'en-US': '/en-US',
       'de-DE': '/de-DE',
@@ -48,7 +46,6 @@ const Blogs = async () => {
       </section>
 
       <PostSlider data={response.slice(6)}/>
-      <Footer/>
 
     </>
   );
