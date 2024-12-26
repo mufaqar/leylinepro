@@ -6,7 +6,7 @@ const Header = () => {
         <>
             <header className='bg-[#232529] border-b z-50 border-black sticky top-0 flex items-center justify-between px-5'>
                 <div className='flex items-center gap-4 sm:gap-10 py-4'>
-                    <Link href="/">
+                    <Link href="/blogs">
                         <Logo />
                     </Link>
                     <ul className='flex items-center text-gray-400 sm:text-lg gap-4 sm:gap-10'>

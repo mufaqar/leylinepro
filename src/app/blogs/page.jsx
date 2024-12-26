@@ -34,10 +34,7 @@ const Blogs = async () => {
           </div>
         </div>
       </section>
-
       <PostSlider data={response.slice(6)}/>
-  
-
     </>
   );
 };
