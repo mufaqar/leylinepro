@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Banner = () => {
+const Banner = ({title}) => {
   return (
-    <main className='bg-[#252C39] py-24 text-center text-6xl font-bold text-gray-200'>
-        AI Videos
+    <main className='bg-[#252C39] py-24 capitalize text-center text-6xl font-bold text-gray-200'>
+        {title.replace(/-/g, ' ')}
     </main>
   )
 }

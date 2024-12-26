@@ -1,16 +1,17 @@
 import React from 'react'
 import Banner from './components/banner'
 import CategoryBlogDesign from './components/category-blog-design'
-import Footer from "../components/footer"
 
-const Category = () => {
+const Category = async ({params}) => {
+  const res = await fetchDataByCategory(params?.category)
+
   return (
     <section className='bg-[#1A202C]'>
-      <Banner />
+      <Banner title={params?.category} />
       <div className='flex max-w-[1280px] flex-col lg:flex-row gap-7 lg:gap-16 mx-auto px-3 py-20 w-full'>
         <div className='lg:w-[70%] flex flex-col gap-6'>
-          {[1, 2]?.map((item, idx) => (
-            <CategoryBlogDesign key={idx} small />
+          {res?.map((item, idx) => (
+            <CategoryBlogDesign key={idx} data={item} small />
           ))}
         </div>
         <div className="lg:w-[30%] flex flex-col gap-6">
@@ -29,3 +30,59 @@ const Category = () => {
 }
 
 export default Category
+
+
+
+
+const fetchDataByCategory = async (slug) => {
+  const endpoint = 'https://leylinepro.net/graphql';
+  
+  const query = `
+    query NewQuery {
+      category(id: "${slug}", idType: SLUG) {
+        posts(first: 100) {
+          nodes {
+            title
+            slug
+            featuredImage {
+              node {
+                mediaItemUrl
+              }
+            }
+            excerpt
+            categories(first: 1) {
+              nodes {
+                slug
+                name
+              }
+            }
+            dateGmt
+          }
+        }
+      }
+    }
+  `;
+  
+  var result
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    result = await response.json();
+
+  } catch (error) {
+    console.error('Error fetching GraphQL data:', error);
+  }
+
+  return result.data?.category?.posts?.nodes
+};

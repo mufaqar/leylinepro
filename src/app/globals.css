@@ -6,3 +6,30 @@
 body {
   background: #252C39;
 }
+
+._content{
+  color: #fffffff2;
+}
+._content p{
+  margin-bottom: 10px;
+}
+._content img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+._content h2,
+._content h3,
+._content h4,
+._content h5,
+._content h6{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+._content ul{
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin-bottom: 10px;
+}
