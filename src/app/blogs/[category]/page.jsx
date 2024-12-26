@@ -24,7 +24,6 @@ const Category = async ({params}) => {
           </div>
         </div>
       </div>
-      <Footer/>
     </section>
   )
 }
