@@ -36,7 +36,7 @@ const Blogs = async () => {
       </section>
 
       <PostSlider data={response.slice(6)}/>
-      <Footer/>
+  
 
     </>
   );
