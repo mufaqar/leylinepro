@@ -9,8 +9,8 @@ const BlogDesign = ({readmore, small, data}) => {
         <figure>
             <Image src={data?.featured_image_src_large[0]} className='w-full' alt='' width={800} height={400}/>
         </figure>
-        <h6 className={`mt-2 text-[#588A8D] capitalize text-xl hover:text-gray-200 underline ${small && 'text-base'}`}><Link href={`/blogs/${data?.category_info[0]?.slug}`}>{data?.category_info[0]?.name}</Link></h6>
-        <h2 className={`text-gray-200 font-bold text-xl md:text-3xl lg:text-4xl hover:text-gray-400 cursor-pointer capitalize mt-3 ${small && "md:text-xl lg:text-2xl"}`}>
+        <h6 className={`mt-2 text-[#588A8D] capitalize text-xl hover:text-gray-200 underline ${small && '!text-base'}`}><Link href={`/blogs/${data?.category_info[0]?.slug}`}>{data?.category_info[0]?.name}</Link></h6>
+        <h2 className={`text-gray-200 font-bold text-xl md:text-3xl lg:text-4xl hover:text-gray-400 cursor-pointer capitalize mt-3 ${small && "md:!text-xl lg:!text-2xl"}`}>
           <Link href={`/${data?.slug}`}>{data?.title?.rendered}</Link>
         </h2>
         <h4 className='text-gray-200 font-medium mt-2 mb-5'>Updated on {dateFormate(data?.modified_gmt)}</h4>

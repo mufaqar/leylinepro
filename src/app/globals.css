@@ -33,3 +33,15 @@ body {
   padding-left: 1.4rem;
   margin-bottom: 10px;
 }
+
+#toc_container{
+  background-color: #fff;
+  color: #5898BA;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+.toc_title{
+  font-size: 20px;
+  font-weight: 600;
+}

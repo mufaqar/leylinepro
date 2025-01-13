@@ -10,15 +10,15 @@ const Header = () => {
                         <Logo />
                     </Link>
                     <ul className='flex items-center text-gray-400 sm:text-lg gap-4 sm:gap-10'>
-                        <li className='hover:text-white'><Link href="#">Discover</Link></li>
-                        <li className='hover:text-white'><Link href="#">Jobs</Link></li>
-                        <li className='hover:text-white'><Link href="#">Producer Tool</Link></li>
-                        <li className='hover:text-white'><Link href="#">AI</Link></li>
+                        <li className='hover:text-white'><Link href="https://leylinepro.com/mktp/">Discover</Link></li>
+                        <li className='hover:text-white'><Link href="https://leylinepro.com/mktp/enterprises/public-jobs">Jobs</Link></li>
+                        <li className='hover:text-white'><Link href="https://leylinepro.com/mktp/producer-tool">Producer Tool</Link></li>
+                        <li className='hover:text-white'><Link href="https://leylinepro.com/mktp/ai">AI</Link></li>
                     </ul>
                 </div>
                 <div className=' items-center gap-3 hidden md:flex'>
-                    <Link href="#" className='bg-[#1F3337] text-[#00ADAE] text-lg hover:opacity-80 px-6 py-2 rounded-full'>Sign In</Link>
-                    <Link href="#" className='bg-[#00ADAE] text-[#fff] text-lg hover:opacity-80 px-6 py-2 rounded-full'>Sign Up</Link>
+                    <Link href="https://leylinepro.com/mktp/login?to=/ai" className='bg-[#1F3337] text-[#00ADAE] text-lg hover:opacity-80 px-6 py-2 rounded-full'>Sign In</Link>
+                    <Link href="https://leylinepro.com/mktp/register?to=/ai" className='bg-[#00ADAE] text-[#fff] text-lg hover:opacity-80 px-6 py-2 rounded-full'>Sign Up</Link>
                 </div>
             </header>
         </>
